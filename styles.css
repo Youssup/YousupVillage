@@ -1,0 +1,22 @@
+body
+{
+    background-color: #282828;
+}
+
+.logo
+{
+    width: 100px;
+}
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(88, 88, 88);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
