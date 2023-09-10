@@ -1,22 +1,32 @@
-body
+body, html
 {
-    background-color: #282828;
+    background: rgb(26, 26, 26);
 }
 
 .logo
 {
-    width: 100px;
+    width: 40px;
+    position: fixed;
+    left: 5px;
+    top: 13px;
 }
 
-.header
+.navbar
 {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgb(88, 88, 88);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    right: 10px;
+    top: 10px;
+    height: 100px;
+    word-spacing: 20px
+}
+
+.navbar a
+{
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+.header header
+{
+    background-image: linear-gradient(rgb(69, 69, 69), rgb(26, 26, 26));
 }
