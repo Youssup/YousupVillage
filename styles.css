@@ -1,32 +1,60 @@
-body, html
+*
 {
-    background: rgb(26, 26, 26);
+    padding: 0;
+    margin: 0;
 }
 
-.logo
+html,body
 {
-    width: 40px;
-    position: fixed;
-    left: 5px;
-    top: 13px;
+    background-color: gray;
 }
 
 .navbar
 {
-    position: fixed;
-    right: 10px;
-    top: 10px;
-    height: 100px;
-    word-spacing: 20px
+    background-color: rgb(159, 159, 159);
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    border-style: solid;
+
+}
+
+.navlogo
+{
+    border-style: solid;
+    color: green;
+    margin-top: 10px;
+    height: 40px;
+    
+}
+
+.nav-list
+{
+    border-style: solid;
+    list-style-type: none;
+}
+
+.nav-list .list-item
+{
+    border-style: solid;
+    display: inline-block;
+    padding: 20px 10px;
 }
 
 .navbar a
 {
-    font-size: 40px;
-    color: white;
+    border-style: solid;
+    color: rgb(152, 56, 56);
     text-decoration: none;
 }
-.header header
+
+.navbar a:hover
 {
-    background-image: linear-gradient(rgb(69, 69, 69), rgb(26, 26, 26));
+    color: red;
 }
+
+.navbar a:active
+{
+    background-color: black;    
+}
+
