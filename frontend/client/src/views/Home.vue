@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
@@ -12,11 +11,10 @@
                     </div>
                 </div>
                 <div>
-                    <h1 class="intro text-5xl font-bold">Hello! My name is Yousup</h1>
+                    <h1 class="intro text-5xl font-bold">Hello! My name is Yousup</h1>      
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -28,7 +26,6 @@
     border-right: .15em solid gray;
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .15em;
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
