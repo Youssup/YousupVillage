@@ -5,8 +5,9 @@ import { RouterLink } from 'vue-router';
 <template>
     <div class="navbar bg-base-100">
       <div class="flex-1">
+        <RouterLink to="/">
         <a class="btn btn-ghost text-xl">Yousup Song</a>
-        
+      </RouterLink>
       </div>
       <div class="flex-none">
         <div class="dropdown dropdown-end">
