@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-wrap justify-center">
+    <div class="flex flex-wrap justify-center m-10">
         <div class="card w-96 bg-base-100 shadow-xl mx-auto">
             <div class="card-body">
                 <span class="indicator-item badge bg-green-500 text-white">Completed</span>
