@@ -19,16 +19,4 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style scoped>
-.footer {
-  position: fixed;
-  bottom: 1px;
-  width: 100%;
-  transform: translateY(80%);
-  transition: transform 0.5s;
-  justify-content: center;
-}
-
-.footer:hover {
-  transform: translateY(0);
-}
 </style>
