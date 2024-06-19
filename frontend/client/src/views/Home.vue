@@ -5,7 +5,7 @@
 <template>
     <div class="container mx-auto pt-20 puff-in-center">
         <div class="hero-content flex-col lg:flex-row">
-            <div class="avatar w-3/6 brightness-90">
+            <div class="avatar w-5/6 brightness-90">
                 <div class="rounded-full border-2 border-neutral-400">
                     <img src="../components/icons/profile.jpg" />
                 </div>
@@ -16,7 +16,6 @@
         </div>
     </div>
 </template>
-
 <style>
 .puff-in-center {
     -webkit-animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both;
