@@ -2,38 +2,51 @@
 
 </script>
 
+<script setup lang="ts">
+</script>
+
 <template>
-    <div class="container mx-auto pt-20 puff-in-center">
-    <div class="hero-content flex lg:flex-row">
-        <div class="avatar w-5/6 brightness-90">
-            <div class="rounded-full border-2 border-neutral-400">
-                <img src="../assets/icons/profile.jpg" />
+    <!-- Header -->
+    <div class="container mx-auto puff-in-center">
+        <div class="hero-content flex flex-col gap-x-20 sm:flex-row items-center sm:items-start">
+            <!-- Profile Picture -->
+            <div class="avatar w-40 sm:w-3/6 mb-6 sm:mb-0 brightness-90">
+                <div class="rounded-full border-2 border-neutral-400">
+                    <img src="../assets/icons/profile.jpg" alt="Profile" />
+                </div>
             </div>
-        </div>
-        <div class="flex flex-col items-center">
-            <div>
-                <h1 class="text-2xl mb-6 text-center">Hello!</h1>
-                <h1 class="intro text-4xl font-bold text-center">My name is Yousup</h1>
-                <!-- <img class="line absolute -bottom-24 left-2/3 transform -translate-x-96 -translate-y-8 z-0 w-3/4 md:w-1/2 rotate-6" src="../assets/icons/GrayLine.png" /> -->
-            </div>
-            <div class="flex space-x-4">
-                <button class="learn-more mt-6">
-                    <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                    </span>
-                    <span class="button-text"><a href="https://github.com/Youssup" target="_blank">Github</a></span>
-                </button>
-                <button class="learn-more mt-6">
-                    <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                    </span>
-                    <span class="button-text"><a href="https://www.linkedin.com/in/yousupsong/" target="_blank">LinkedIn</a></span>
-                </button>
+
+            <!-- Links -->
+            <div class="flex flex-col items-center my-auto sm:items-start text-center sm:text-left">
+                <div>
+                    <h1 class="text-2xl mb-6 text-center">Hello!</h1>
+                    <h1 class="intro text-4xl font-bold">My name is Yousup</h1>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
+                    <!-- GitHub Button -->
+                    <button class="learn-more mb-4 sm:mb-0">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">
+                            <a href="https://github.com/Youssup" target="_blank">GitHub</a>
+                        </span>
+                    </button>
+                    <!-- LinkedIn Button -->
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">
+                            <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">LinkedIn</a>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </template>
+
 <style>
 .puff-in-center {
     -webkit-animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both;
