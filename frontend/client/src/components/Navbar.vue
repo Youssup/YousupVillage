@@ -4,29 +4,29 @@ import { RouterLink } from 'vue-router';
 
 <template>
   <div class="navbar bg-base-100">
-    <div class="flex-1">
-      <RouterLink to="/">
-        <a class="btn btn-ghost text-xl">Yousup Song</a>
-      </RouterLink>
-    </div>
-    <div class="flex-none">
-      <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg></div>
-        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-2 shadow">
           <RouterLink to="/">
-            <li><a>Home</a></li>
-          </RouterLink>
-          <RouterLink to="/projects">
-            <li><a>Projects</a></li>
-          </RouterLink>
-          <RouterLink to="/resume">
-            <li><a>Resume</a></li>
+            <li><a>About</a></li>
           </RouterLink>
         </ul>
       </div>
+      <!-- <RouterLink to="/"><a class="btn btn-ghost text-xl">Yoosup Song</a></RouterLink> -->
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <RouterLink to="/">
+          <li><a class="text-xl text-bold">About</a></li>
+        </RouterLink>
+      </ul>
+    </div>
+    <div class="navbar-end">
     </div>
   </div>
 </template>
