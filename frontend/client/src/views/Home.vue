@@ -8,7 +8,7 @@
 <template>
     <!-- Header -->
     <div class="container mx-auto puff-in-center">
-        <div class="hero-content flex flex-col gap-x-20 sm:flex-row items-center sm:items-start">
+        <div class="hero-content flex flex-col gap-x-10 sm:flex-row items-center sm:items-start">
             <!-- Profile Picture -->
             <div class="avatar w-40 sm:w-3/6 mb-6 sm:mb-0 brightness-90">
                 <div class="rounded-full border-2 border-neutral-400">
