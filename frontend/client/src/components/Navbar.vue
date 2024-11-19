@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router';
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-2 shadow">
           <RouterLink to="/">
-            <li><a>About</a></li>
+            <li><a>Home</a></li>
           </RouterLink>
         </ul>
       </div>
