@@ -2,210 +2,187 @@
 
 </script>
 
-<script setup lang="ts">
-</script>
-
 <template>
     <!-- Header -->
-    <div class="container mx-auto puff-in-center">
-        <div class="hero-content flex flex-col gap-x-10 sm:flex-row items-center sm:items-start">
-            <!-- Profile Picture -->
-            <div class="avatar w-40 sm:w-3/6 mb-6 sm:mb-0 brightness-90">
-                <div class="rounded-full border-2 border-neutral-400">
-                    <img src="../assets/icons/profile.jpg" alt="Profile" />
-                </div>
+    <section class="container mx-auto min-h-screen flex flex-col items-center justify-center">
+    <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <!-- Profile Picture -->
+        <div class="avatar w-40 sm:w-3/6 mb-6 sm:mb-0 brightness-90">
+            <div class="rounded-full border-2 border-neutral-400">
+                <img src="../assets/images/profile.jpg" loading="lazy" alt="Profile" />
             </div>
+        </div>
 
-            <!-- Links -->
-            <div class="flex flex-col items-center my-auto sm:items-start text-center sm:text-left">
-                <div>
-                    <h1 class="text-2xl mb-6 text-center">Hello!</h1>
-                    <h1 class="intro text-4xl font-bold">My name is Yousup</h1>
-                </div>
-                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
-                    <!-- GitHub Button -->
+        <!-- Links -->
+        <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
+            <div>
+                <h1 class="text-2xl mb-4 sm:mb-6 text-center">Hello!</h1>
+                <h1 class="intro text-4xl font-bold">My name is Yousup</h1>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
+                <!-- GitHub Button -->
+                <a href="https://github.com/Youssup" target="_blank">
                     <button class="learn-more mb-4 sm:mb-0">
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                         </span>
                         <span class="button-text">
-                            <a href="https://github.com/Youssup" target="_blank">GitHub</a>
+                            GitHub
                         </span>
                     </button>
-                    <!-- LinkedIn Button -->
+                </a>
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">
                     <button class="learn-more">
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                         </span>
                         <span class="button-text">
-                            <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">LinkedIn</a>
+                            LinkedIn
                         </span>
                     </button>
-                </div>
+                </a>
             </div>
         </div>
     </div>
-    <!-- Summary -->
+</section>
+
+    <!-- Experience -->
     <section>
-        <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-screen-xl flex flex-col lg:h-svh justify-center">
-            <div class="flex flex-col ">
-                <div class="prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl">
-                    <div>
-                        <h1>Simplified markup</h1>
-                        <p class="text-balance">
-                            See the code for this page to see how you can use Astro to simplify your markup.
-                        </p>
-                    </div>
-                </div> <!-- Starts component -->
-                <div class="mt-6 border-t pt-12">
-                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center ">
-                        <div> <span class="text-gray-600  uppercase text-xs font-medium "> Because why not </span>
-                            <p class="text-4xl mt-8 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Innovative financial solutions for every situation </p>
-                            <p class="text-sm  mt-4 text-gray-700 text-balance"> Discover a variety of tools, services,
-                                and expert guidance tailored to your unique financial needs. </p>
-                            <div
-                                class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950">
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        class="icon icon-tabler text-gray-700 size-4 icon-tabler-360"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path
-                                            d="M17 15.328c2.414 -.718 4 -1.94 4 -3.328c0 -2.21 -4.03 -4 -9 -4s-9 1.79 -9 4s4.03 4 9 4">
-                                        </path>
-                                        <path d="M9 13l3 3l-3 3"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> Clear data visibility
-                                    </span> </div>
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        class="icon icon-tabler text-gray-700 size-4 icon-tabler-antenna-bars-3"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M6 18l0 -3"></path>
-                                        <path d="M10 18l0 -6"></path>
-                                        <path d="M14 18l0 .01"></path>
-                                        <path d="M18 18l0 .01"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> Reduced external factors
-                                    </span> </div>
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        class="icon icon-tabler text-gray-700 size-4 icon-tabler-load-balancer"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M12 13m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                        <path d="M12 20m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-                                        <path d="M12 16v3"></path>
-                                        <path d="M12 10v-7"></path>
-                                        <path d="M9 6l3 -3l3 3"></path>
-                                        <path d="M12 10v-7"></path>
-                                        <path d="M9 6l3 -3l3 3"></path>
-                                        <path d="M14.894 12.227l6.11 -2.224"></path>
-                                        <path d="M17.159 8.21l3.845 1.793l-1.793 3.845"></path>
-                                        <path d="M9.101 12.214l-6.075 -2.211"></path>
-                                        <path d="M6.871 8.21l-3.845 1.793l1.793 3.845"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> enhanced stabilty </span>
-                                </div>
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        class="icon icon-tabler text-gray-700 size-4 icon-tabler-brand-speedtest"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M5.636 19.364a9 9 0 1 1 12.728 0"></path>
-                                        <path d="M16 9l-4 4"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> accelerated times </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="h-full md:order-first"> <img
-                                src="https://i.pinimg.com/564x/59/41/a0/5941a02c048f6226031a0487451c2651.jpg" alt="#_"
-                                class=" bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square  w-full h-full object-cover object-center">
+        <h1 class="ml-8 text-6xl md:text-8xl md:ml-20 font-bold text-gray-400">Experience</h1>
+        <div
+            class="mx-auto max-w-7xl px-8 md:px-12 lg:px-32 my-10 divide-y prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl space-y-10 text-black text-sm">
+            <div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+                <div>
+                    <div class="lg:sticky lg:pb-16 top-0">
+                        <div class="pt-8">
+                            <p>Sep 2024 - Present</p>
+                            <p>(3 months)</p>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-24 items-center md:flex-row-reverse">
-                        <div> <span class="text-gray-600  uppercase text-xs font-medium "> Just because we can </span>
-                            <p class="text-4xl mt-8 tracking-tighter font-semibold text-gray-700 text-balance"> Tailored
-                                financial solutions for any scenario </p>
-                            <p class="text-sm  mt-4 text-gray-700 text-balance"> Discover a range of financial
-                                instruments and personalized advice designed to meet your unique requirements. </p>
-                            <div
-                                class="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950">
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-database text-gray-700 size-4"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0"></path>
-                                        <path d="M4 6v6a8 3 0 0 0 16 0v-6"></path>
-                                        <path d="M4 12v6a8 3 0 0 0 16 0v-6"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> Transparent Data Access
-                                    </span> </div>
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-building text-gray-700 size-4"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M3 21l18 0"></path>
-                                        <path d="M9 8l1 0"></path>
-                                        <path d="M9 12l1 0"></path>
-                                        <path d="M9 16l1 0"></path>
-                                        <path d="M14 8l1 0"></path>
-                                        <path d="M14 12l1 0"></path>
-                                        <path d="M14 16l1 0"></path>
-                                        <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> Lowered Interference </span>
-                                </div>
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-augmented-reality-2 text-gray-700 size-4"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M10 21h-2a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v3.5">
-                                        </path>
-                                        <path d="M17 17l-4 -2.5l4 -2.5l4 2.5v4.5l-4 2.5z"></path>
-                                        <path d="M13 14.5v4.5l4 2.5"></path>
-                                        <path d="M17 17l4 -2.5"></path>
-                                        <path d="M11 4h2"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> Improved Reliability </span>
-                                </div>
-                                <div class="inline-flex items-center gap-2  text-xs text-gray-700"> <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-time-duration-0 text-gray-700 size-4"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M3 12v.01"></path>
-                                        <path d="M21 12v.01"></path>
-                                        <path d="M12 21v.01"></path>
-                                        <path d="M12 3v.01"></path>
-                                        <path d="M7.5 4.2v.01"></path>
-                                        <path d="M16.5 4.2v.01"></path>
-                                        <path d="M16.5 19.8v.01"></path>
-                                        <path d="M7.5 19.8v.01"></path>
-                                        <path d="M4.2 16.5v.01"></path>
-                                        <path d="M19.8 16.5v.01"></path>
-                                        <path d="M19.8 7.5v.01"></path>
-                                        <path d="M4.2 7.5v.01"></path>
-                                        <path d="M10 11v2a2 2 0 1 0 4 0v-2a2 2 0 1 0 -4 0z"></path>
-                                    </svg> <span class="text-gray-950 font-medium text-sm"> Faster Processing Times
-                                    </span> </div>
-                            </div>
-                        </div>
-                        <div class="h-full "> <img
-                                src="https://i.pinimg.com/564x/4e/a7/ff/4ea7ff230ad9f3bc1c30b1b6cbaccad3.jpg" alt="#_"
-                                class=" bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square  w-full h-full object-cover object-center">
+                </div>
+                <div class="lg:col-span-2 pt-8">
+                    <div class="flex-shrink-0">
+                        <div class="mx-auto ">
+                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance"> Private
+                                Tutoring </p>
+                            <p class="line-clamp-4">As a freelance tutor, I provide personalized support to students,
+                                helping them with various academic subjects. My focus includes student development,
+                                mentoring, and offering guidance in both technical and non-technical areas. I adapt my
+                                teaching style to meet individual needs, ensuring effective learning outcomes.</p>
                         </div>
                     </div>
-                </div> <!-- Emds component -->
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+                <div>
+                    <div class="lg:sticky lg:pb-16 top-0">
+                        <div class="pt-8">
+                            <p>May 2024 - Present</p>
+                            <p>(7 months)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 pt-8">
+                    <div class="flex-shrink-0">
+                        <div class="mx-auto ">
+                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                Support Engineer at Agile InfoTech</p>
+                            <p class="line-clamp-4">In my current role as a part-time support engineer, I provide
+                                technical assistance to clients, helping troubleshoot issues related to computer
+                                hardware and software. I communicate effectively with customers to ensure their needs
+                                are addressed and maintain strong technical support across the company's service
+                                offerings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+                <div>
+                    <div class="lg:sticky lg:pb-16 top-0">
+                        <div class="pt-8">
+                            <p>May 2024 - Nov 2024</p>
+                            <p>(7 months)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 pt-8">
+                    <div class="flex-shrink-0">
+                        <div class="mx-auto ">
+                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                Freelance Web Developer</p>
+                            <p class="line-clamp-4">As a freelance web developer, I design, develop, and deploy
+                                responsive websites tailored to meet client needs. I work closely with clients to
+                                understand their objectives, ensuring the final product aligns with their vision. My
+                                work involves utilizing modern web technologies to create engaging and functional
+                                websites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+                <div>
+                    <div class="lg:sticky lg:pb-16 top-0">
+                        <div class="pt-8">
+                            <p>August 2022 - Present</p>
+                            <p>(2 years 4 months)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 pt-8">
+                    <div class="flex-shrink-0">
+                        <div class="mx-auto ">
+                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                President of Eleet Coders </p>
+                            <p class="line-clamp-4">As President, I oversee the operations of Eleet Coders, organizing
+                                events, workshops, and networking opportunities for students pursuing careers in
+                                computer science. My role involves fostering a collaborative learning environment,
+                                ensuring members have the resources needed for professional growth, and representing the
+                                club in university-wide initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+                <div>
+                    <div class="lg:sticky lg:pb-16 top-0">
+                        <div class="pt-8">
+                            <p>Sep 2023 - Oct 2024</p>
+                            <p>(1 year 2 months)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 pt-8">
+                    <div class="flex-shrink-0">
+                        <div class="mx-auto ">
+                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                Sales Associate at Club Monaco</p>
+                            <p class="line-clamp-4">As a Sales Associate at Club Monaco, I provided excellent customer
+                                service, assisting clients with their purchases and ensuring a positive in-store
+                                experience. My responsibilities included maintaining store presentation and supporting
+                                the sales team in meeting performance goals.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 </template>
 
 <style>
+.dm-sans-hel {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
 .puff-in-center {
     -webkit-animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both;
     animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both

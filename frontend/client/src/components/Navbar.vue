@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <div class="navbar bg-base-100">
+  <div class="navbar">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ import { RouterLink } from 'vue-router';
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <RouterLink to="/">
-          <li><a class="text-xl text-bold">About</a></li>
+          <li><a class="text-xl text-bold">Home</a></li>
         </RouterLink>
       </ul>
     </div>
