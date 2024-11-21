@@ -27,7 +27,7 @@ onMounted(() => {
         <!-- Profile Picture -->
         <div class="avatar sm:w-3/6 mb-6 sm:mb-0">
             <div class="rounded-full border-2 border-neutral-400">
-                <img src=".../dist/assets/profile-DT14_gEl.jpg" alt="Profile" />
+                <img src="../assets/images/profile.jpg" alt="Profile" />
             </div>
         </div>
 
