@@ -25,11 +25,11 @@ onMounted(() => {
     <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
     <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
         <!-- Profile Picture -->
-        <div class="avatar sm:w-3/6 mb-6 sm:mb-0">
-            <div class="rounded-full border-2 border-neutral-400">
-                <img src="../assets/images/download.jpg" alt="Profile" />
-            </div>
-        </div>
+        <div class="avatar mb-6">
+    <div class="rounded-full border-2 border-neutral-400">
+        <img src="../assets/images/profile.jpg" alt="Profile" class="w-auto" />
+    </div>
+</div>
 
         <!-- Links -->
         <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
