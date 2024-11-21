@@ -23,7 +23,9 @@ import { RouterLink } from 'vue-router';
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
+        <RouterLink to="/">
           <li><a href="#header" class="text-xl text-bold">Home</a></li>
+        </RouterLink>
         <li><a href="#experience" class="text-xl text-bold">Experience</a></li>
       </ul>
     </div>
