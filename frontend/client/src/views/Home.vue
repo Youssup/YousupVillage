@@ -1,15 +1,33 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 
+onMounted(() => {
+    const elements = document.querySelectorAll('.slide-in-element');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('slide-in-bottom');
+                    entry.target.classList.add('animated');
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    elements.forEach((element) => observer.observe(element));
+});
 </script>
 
 <template>
     <!-- Header -->
-    <section class="container mx-auto min-h-screen flex flex-col items-center justify-center">
+    <section id="header" class="puff-in-center container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
+    <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
+    <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
     <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
         <!-- Profile Picture -->
-        <div class="avatar w-40 sm:w-3/6 mb-6 sm:mb-0 brightness-90">
+        <div class="avatar sm:w-3/6 mb-6 sm:mb-0">
             <div class="rounded-full border-2 border-neutral-400">
-                <img src="../assets/images/profile.jpg" loading="lazy" alt="Profile" />
+                <img src="../assets/images/profile.jpg" alt="Profile" />
             </div>
         </div>
 
@@ -17,7 +35,8 @@
         <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
             <div>
                 <h1 class="text-2xl mb-4 sm:mb-6 text-center">Hello!</h1>
-                <h1 class="intro text-4xl font-bold">My name is Yousup</h1>
+                <h1 class="intro hidden sm:block visible text-4xl font-bold">My name is Yoosup Song</h1>
+                <h1 class="intro text-4xl sm:hidden font-bold">My name is Yoosup</h1>
             </div>
             <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
                 <!-- GitHub Button -->
@@ -48,13 +67,13 @@
 </section>
 
     <!-- Experience -->
-    <section>
-        <h1 class="ml-8 text-6xl md:text-8xl md:ml-20 font-bold text-gray-400">Experience</h1>
+    <section id="experience">
+        <h1 class="ml-8 text-6xl md:text-8xl md:ml-20 font-bold text-gray-400 slide-in-element">Experience</h1>
         <div
             class="mx-auto max-w-7xl px-8 md:px-12 lg:px-32 my-10 divide-y prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl space-y-10 text-black text-sm">
             <div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
                 <div>
                     <div class="lg:sticky lg:pb-16 top-0">
                         <div class="pt-8">
@@ -65,9 +84,9 @@
                 </div>
                 <div class="lg:col-span-2 pt-8">
                     <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance"> Private
-                                Tutoring </p>
+                        <div class="mx-auto">
+                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">Private
+                                Tutoring</p>
                             <p class="line-clamp-4">As a freelance tutor, I provide personalized support to students,
                                 helping them with various academic subjects. My focus includes student development,
                                 mentoring, and offering guidance in both technical and non-technical areas. I adapt my
@@ -76,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
                 <div>
                     <div class="lg:sticky lg:pb-16 top-0">
                         <div class="pt-8">
@@ -99,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
                 <div>
                     <div class="lg:sticky lg:pb-16 top-0">
                         <div class="pt-8">
@@ -122,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
                 <div>
                     <div class="lg:sticky lg:pb-16 top-0">
                         <div class="pt-8">
@@ -145,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 ">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
                 <div>
                     <div class="lg:sticky lg:pb-16 top-0">
                         <div class="pt-8">
@@ -169,19 +188,47 @@
             </div>
         </div>
     </section>
-
 </template>
 
 <style>
-.dm-sans-hel {
-    font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 3rem;
-    line-height: 1.4;
-    -webkit-font-smoothing: antialiased;
+.custom-heading-left {
+    text-align: left !important; /* Override text-center for left alignment */
+    margin-left: 0 !important;   /* Ensure no margin on the left */
 }
+
+.custom-heading-left {
+    text-align: left !important; /* Override text-center for larger screens */
+    margin-left: 24px !important; /* Custom margin for md and up screens */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.slide-in-element {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.slide-in-bottom {
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 .puff-in-center {
     -webkit-animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both;
