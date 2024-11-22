@@ -27,11 +27,10 @@ onMounted(() => {
         <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
             <!-- Profile Picture -->
             <div class="avatar mb-6">
-                <div class="w-64 rounded-full ring ring-neutral-400">
+                <div class="w-64 md:w-96 xl:w-full rounded-full ring ring-neutral-400">
                     <img src="../assets/images/profile.jpg" alt="Profile" />
                 </div>
             </div>
-
             <!-- Links -->
             <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
                 <div>
