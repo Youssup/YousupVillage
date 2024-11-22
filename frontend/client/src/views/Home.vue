@@ -20,52 +20,51 @@ onMounted(() => {
 
 <template>
     <!-- Header -->
-    <section id="header"
-        class="puff-in-center container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
-        <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
-        <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
-        <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
-            <!-- Profile Picture -->
-            <div class="avatar mb-6">
-                <div class="rounded-full ring ring-neutral-400">
-                    <img src="../assets/images/profile.jpg" alt="Profile" class="w-auto"/>
-                </div>
-            </div>
+    <section id="header" class="puff-in-center container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
+    <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
+    <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
+    <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <!-- Profile Picture -->
+        <div class="avatar mb-6">
+    <div class="rounded-full border-2 border-neutral-400">
+        <img src="../assets/images/profile.jpg" alt="Profile" class="w-auto" />
+    </div>
+</div>
 
-            <!-- Links -->
-            <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
-                <div>
-                    <h1 class="text-2xl mb-4 sm:mb-6 text-center">Hello!</h1>
-                    <h1 class="intro hidden sm:block visible text-4xl font-bold">My name is Yoosup Song</h1>
-                    <h1 class="intro text-4xl sm:hidden font-bold">My name is Yoosup</h1>
-                </div>
-                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
-                    <!-- GitHub Button -->
-                    <a href="https://github.com/Youssup" target="_blank">
-                        <button class="learn-more mb-4 sm:mb-0">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">
-                                GitHub
-                            </span>
-                        </button>
-                    </a>
-                    <!-- LinkedIn Button -->
-                    <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">
-                        <button class="learn-more">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">
-                                LinkedIn
-                            </span>
-                        </button>
-                    </a>
-                </div>
+        <!-- Links -->
+        <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
+            <div>
+                <h1 class="text-2xl mb-4 sm:mb-6 text-center">Hello!</h1>
+                <h1 class="intro hidden sm:block visible text-4xl font-bold">My name is Yoosup Song</h1>
+                <h1 class="intro text-4xl sm:hidden font-bold">My name is Yoosup</h1>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
+                <!-- GitHub Button -->
+                <a href="https://github.com/Youssup" target="_blank">
+                    <button class="learn-more mb-4 sm:mb-0">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">
+                            GitHub
+                        </span>
+                    </button>
+                </a>
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">
+                            LinkedIn
+                        </span>
+                    </button>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Experience -->
     <section id="experience">
@@ -193,17 +192,13 @@ onMounted(() => {
 
 <style>
 .custom-heading-left {
-    text-align: left !important;
-    /* Override text-center for left alignment */
-    margin-left: 0 !important;
-    /* Ensure no margin on the left */
+    text-align: left !important; /* Override text-center for left alignment */
+    margin-left: 0 !important;   /* Ensure no margin on the left */
 }
 
 .custom-heading-left {
-    text-align: left !important;
-    /* Override text-center for larger screens */
-    margin-left: 24px !important;
-    /* Custom margin for md and up screens */
+    text-align: left !important; /* Override text-center for larger screens */
+    margin-left: 24px !important; /* Custom margin for md and up screens */
 }
 
 html {
