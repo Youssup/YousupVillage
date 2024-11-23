@@ -13,9 +13,7 @@ import { RouterLink } from 'vue-router';
           </svg>
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-2 shadow">
-          <RouterLink to="/">
             <li><a href="#header">Home</a></li>
-          </RouterLink>
           <li><a href="#experience">Experience</a></li>
         </ul>
       </div>
@@ -23,9 +21,7 @@ import { RouterLink } from 'vue-router';
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <RouterLink to="/">
           <li><a href="#header" class="text-xl text-bold">Home</a></li>
-        </RouterLink>
         <li><a href="#experience" class="text-xl text-bold">Experience</a></li>
       </ul>
     </div>

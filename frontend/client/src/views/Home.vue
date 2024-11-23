@@ -21,13 +21,13 @@ onMounted(() => {
 <template>
     <!-- Header -->
     <section id="header"
-        class="puff-in-center container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
+        class="container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
         <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
         <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
-        <div class="hero-content flex flex-col gap-10 sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <div class="hero-content flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
             <!-- Profile Picture -->
             <div class="avatar mb-6">
-                <div class="w-64 md:w-72 xl:w-96 rounded-full ring ring-neutral-400">
+                <div class="w-64 md:w-72 lg:w-96 xl:w-10/12 rounded-full ring ring-neutral-400">
                     <img src="../assets/images/profile.jpg" alt="Profile" />
                 </div>
             </div>
