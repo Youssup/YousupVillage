@@ -20,8 +20,7 @@ onMounted(() => {
 
 <template>
     <!-- Header -->
-    <section id="header"
-        class="container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
+    <section id="header" class="container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
         <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
         <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
         <div class="hero-content flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
@@ -109,11 +108,9 @@ onMounted(() => {
                         <div class="mx-auto ">
                             <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
                                 Support Engineer at Agile InfoTech</p>
-                            <p class="line-clamp-4">In my current role as a part-time support engineer, I provide
-                                technical assistance to clients, helping troubleshoot issues related to computer
-                                hardware and software. I communicate effectively with customers to ensure their needs
-                                are addressed and maintain strong technical support across the company's service
-                                offerings.</p>
+                            <p class="line-clamp-4">As a Support Engineer at Agile InfoTech, I provided technical assistance to
+                                clients, troubleshooting hardware and software issues, and ensured effective
+                                communication to address their needs.</p>
                         </div>
                     </div>
                 </div>
@@ -132,11 +129,9 @@ onMounted(() => {
                         <div class="mx-auto ">
                             <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
                                 Freelance Web Developer</p>
-                            <p class="line-clamp-4">As a freelance web developer, I design, develop, and deploy
-                                responsive websites tailored to meet client needs. I work closely with clients to
-                                understand their objectives, ensuring the final product aligns with their vision. My
-                                work involves utilizing modern web technologies to create engaging and functional
-                                websites.</p>
+                            <p class="line-clamp-4">As a Freelance Web Developer, I designed, developed, and deployed
+                                responsive websites tailored to meet client needs. I worked closely with clients to
+                                understand their objectives, ensuring the final product aligned with their vision.</p>
                         </div>
                     </div>
                 </div>
@@ -155,11 +150,10 @@ onMounted(() => {
                         <div class="mx-auto ">
                             <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
                                 President of Eleet Coders </p>
-                            <p class="line-clamp-4">As President, I oversee the operations of Eleet Coders, organizing
-                                events, workshops, and networking opportunities for students pursuing careers in
-                                computer science. My role involves fostering a collaborative learning environment,
-                                ensuring members have the resources needed for professional growth, and representing the
-                                club in university-wide initiatives.</p>
+                            <p class="line-clamp-4">As President of Eleet Coders, I managed club communications,
+                                organized events and workshops, and fostered a collaborative learning environment to
+                                support members' professional growth. I also taught technical concepts and facilitated
+                                events to enhance members' skills and career readiness.</p>
                         </div>
                     </div>
                 </div>
@@ -179,9 +173,8 @@ onMounted(() => {
                             <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
                                 Sales Associate at Club Monaco</p>
                             <p class="line-clamp-4">As a Sales Associate at Club Monaco, I provided excellent customer
-                                service, assisting clients with their purchases and ensuring a positive in-store
-                                experience. My responsibilities included maintaining store presentation and supporting
-                                the sales team in meeting performance goals.</p>
+                                service by assisting clients, prioritizing tasks under pressure, and exceeding sales
+                                expectations through clear communication in a dynamic environment.</p>
                         </div>
                     </div>
                 </div>

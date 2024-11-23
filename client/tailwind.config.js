@@ -1,15 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+  	extend: {
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		colors: {}
+  	}
   },
   plugins: [
-    require('daisyui')
-  ],
+    require('daisyui'),
+      require("tailwindcss-animate")
+],
   daisyui: {
     themes: ["emerald"],
     base: true, // applies background color and foreground color for root element by default
