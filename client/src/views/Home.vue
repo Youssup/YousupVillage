@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import image from '../assets/images/CommUnity.jpg'
-
+import Background from '../components/Background.vue';
 const projects = ref([
     {
         title: 'Better Calendar',
@@ -88,10 +88,10 @@ const projects = ref([
 
 onMounted(() => {
     if (window.customElements && !customElements.get("animated-icons")) {
-    const script = document.createElement("script");
-    script.src = "https://animatedicons.co/scripts/embed-animated-icons.js";
-    document.body.appendChild(script);
-  }
+        const script = document.createElement("script");
+        script.src = "https://animatedicons.co/scripts/embed-animated-icons.js";
+        document.body.appendChild(script);
+    }
     // Fade in observer
     const fadeElements = document.querySelectorAll('.fade-in');
     const fadeObserver = new IntersectionObserver((entries) => {
@@ -123,54 +123,65 @@ onMounted(() => {
 </script>
 
 <template>
-    <main id="home" class="puff-in-center min-h-screen bg-neutral-50 p-4 md:p-8">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8">
-            <!-- Header -->
-            <section class="container mx-auto min-h-screen flex items-center justify-center">
-                <div
-                    class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-                    <!-- Profile Picture -->
-                    <div class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
-                        <div class="w-full aspect-square rounded-full ring ring-neutral-400 overflow-hidden">
-                            <img src="../assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
-                        </div>
-                    </div>
-                    <!-- Text Content -->
-                    <div class="flex-1 flex flex-col items-center text-center">
-                        <h1 class="text-2xl md:text-3xl mb-2">Yoosup Song</h1>
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4">Backend Software Engineer</h2>
-                        <p class="text-gray-500">
-                            <span>
-                                <img src="../assets/icons/location-pin.svg" alt=""
-                                    class="w-4 h-4 inline-block fill-gray-500" />
-                            </span>
-                            Based in New York, U.S.
-                        </p>
-                        <!-- Social Links -->
-                        <div class="flex flex-row justify-center gap-4 mt-8">
-                            <!-- GitHub Button -->
-                            <a href="https://github.com/Youssup" target="_blank" rel="noopener noreferrer">
-                                <button class="learn-more">
-                                    <span class="circle" aria-hidden="true">
-                                        <span class="icon arrow"></span>
-                                    </span>
-                                    <span class="button-text">Github</span>
-                                </button>
-                            </a>
-                            <!-- LinkedIn Button -->
-                            <a href="https://www.linkedin.com/in/yousupsong/" target="_blank" rel="noopener noreferrer">
-                                <button class="learn-more">
-                                    <span class="circle" aria-hidden="true">
-                                        <span class="icon arrow"></span>
-                                    </span>
-                                    <span class="button-text">LinkedIn</span>
-                                </button>
-                            </a>
-                        </div>
+    <Background>
+        <!-- Header -->
+        <section class="container mx-auto min-h-screen flex items-center justify-center">
+            <div class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                <!-- Profile Picture -->
+                <div class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
+                    <div class="w-full aspect-square rounded-full ring ring-neutral-400 overflow-hidden">
+                        <img src="../assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
                     </div>
                 </div>
-            </section>
-
+                <!-- Text Content -->
+                <div class="flex-1 flex flex-col items-center text-center">
+                    <h1 class="text-2xl md:text-3xl mb-2">Yoosup Song</h1>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Backend Software Engineer</h2>
+                    <p class="text-gray-500">
+                        <span>
+                            <img src="../assets/icons/location-pin.svg" alt=""
+                                class="w-4 h-4 inline-block fill-gray-500" />
+                        </span>
+                        Based in the U.S.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex flex-row justify-center gap-4 mt-8">
+                        <!-- GitHub Button -->
+                        <a href="https://github.com/Youssup" target="_blank" rel="noopener noreferrer">
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Github</span>
+                            </button>
+                        </a>
+                        <!-- LinkedIn Button -->
+                        <a href="https://www.linkedin.com/in/yousupsong/" target="_blank" rel="noopener noreferrer">
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">LinkedIn</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 w-full">
+        <svg class="w-full h-32" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 100V30C25 -10 75 -10 100 30V100H0Z" fill="url(#gradient)"/>
+            <defs>
+                <linearGradient id="gradient" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="white"/>
+                    <stop offset="100%" stop-color="#E5E7EB"/> <!-- This is the Tailwind gray-200 color -->
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+        </section>
+    </Background>
+    <div class="bg-gray-200">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8 pt-4">
             <!-- Projects Section -->
             <div id="projects" class="w-full mt-4">
                 <h2 class="text-4xl font-bold mb-8 slide-in-element">Featured Projects</h2>
@@ -211,7 +222,7 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 </template>
 
 <style scoped>
