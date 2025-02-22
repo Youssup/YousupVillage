@@ -2,11 +2,11 @@
     <div class="bg-white rounded-3xl p-6 shadow-lg hover-lift group">
       <div class="relative overflow-hidden rounded-xl mb-4">
         <img 
-          :src="project.imageUrl || '/api/placeholder/400/400'" 
+          :src="project.imageUrl" 
           :alt="project.title" 
           class="w-full h-72 object-cover" 
         />
-        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div class="text-white text-center p-6">
             <h4 class="text-xl font-bold mb-4">Key Features</h4>
             <ul class="text-sm space-y-2">
@@ -19,11 +19,11 @@
       </div>
       <div class="space-y-6">
         <div>
-          <h3 class="text-2xl font-bold text-neutral-800">{{ project.title }}</h3>
-          <p class="text-neutral-600 mt-3">{{ project.description }}</p>
+          <h3 class="text-2xl font-bold text-gray-600">{{ project.title }}</h3>
+          <p class="text-neutral-500 mt-3">{{ project.description }}</p>
         </div>
         <div class="space-y-4">
-          <h4 class="font-semibold text-neutral-700">Technologies Used:</h4>
+          <h4 class="font-semibold">Technologies Used:</h4>
           <div class="flex flex-wrap gap-2">
             <span 
               v-for="tech in project.technologies" 

@@ -1,19 +1,13 @@
-<script setup lang="ts">
+<script setup>
 import { onMounted, ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
-
-const stats = ref({
-    commits: '500+',
-    repositories: '25+',
-    contributions: '365+',
-    connections: '500+'
-});
+import image from '../assets/images/CommUnity.jpg'
 
 const projects = ref([
     {
         title: 'Better Calendar',
         description: 'Chrome Extension for intelligent event management with location-based reminders and route optimization',
-        imageUrl: '',
+        imageUrl: '../assets/images/better-calendar.png',
         features: [
             'Automated event reminders based on location',
             'Real-time route optimization with traffic',
@@ -33,7 +27,7 @@ const projects = ref([
     {
         title: 'CommUnity',
         description: 'Full-stack community platform enabling local engagement and resource sharing with real-time updates',
-        imageUrl: '',
+        imageUrl: image,
         features: [
             'Real-time community event tracking',
             'Resource sharing marketplace',
@@ -93,6 +87,11 @@ const projects = ref([
 ]);
 
 onMounted(() => {
+    if (window.customElements && !customElements.get("animated-icons")) {
+    const script = document.createElement("script");
+    script.src = "https://animatedicons.co/scripts/embed-animated-icons.js";
+    document.body.appendChild(script);
+  }
     // Fade in observer
     const fadeElements = document.querySelectorAll('.fade-in');
     const fadeObserver = new IntersectionObserver((entries) => {
@@ -103,7 +102,7 @@ onMounted(() => {
             }
         });
     }, { threshold: 0.1 });
-    
+
     fadeElements.forEach(element => fadeObserver.observe(element));
 
     // Slide in observer
@@ -124,113 +123,95 @@ onMounted(() => {
 </script>
 
 <template>
-<main id="home" class="puff-in-center min-h-screen bg-neutral-50 p-4 md:p-8">
-    <div class="max-w-7xl mx-auto flex flex-col gap-8">
-        <!-- Header -->
-    <section class="container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
-        <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
-        <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
-        <div class="hero-content flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
-            <!-- Profile Picture -->
-            <div class="avatar mb-6">
-                <div class="w-64 md:w-72 lg:w-96 xl:w-10/12 rounded-full ring ring-neutral-400">
-                    <img src="../assets/images/profile.jpg" alt="Profile" />
+    <main id="home" class="puff-in-center min-h-screen bg-neutral-50 p-4 md:p-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8">
+            <!-- Header -->
+            <section class="container mx-auto min-h-screen flex items-center justify-center">
+                <div
+                    class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                    <!-- Profile Picture -->
+                    <div class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
+                        <div class="w-full aspect-square rounded-full ring ring-neutral-400 overflow-hidden">
+                            <img src="../assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="flex-1 flex flex-col items-center text-center">
+                        <h1 class="text-2xl md:text-3xl mb-2">Yoosup Song</h1>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">Backend Software Engineer</h2>
+                        <p class="text-gray-500">
+                            <span>
+                                <img src="../assets/icons/location-pin.svg" alt=""
+                                    class="w-4 h-4 inline-block fill-gray-500" />
+                            </span>
+                            Based in New York, U.S.
+                        </p>
+                        <!-- Social Links -->
+                        <div class="flex flex-row justify-center gap-4 mt-8">
+                            <!-- GitHub Button -->
+                            <a href="https://github.com/Youssup" target="_blank" rel="noopener noreferrer">
+                                <button class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Github</span>
+                                </button>
+                            </a>
+                            <!-- LinkedIn Button -->
+                            <a href="https://www.linkedin.com/in/yousupsong/" target="_blank" rel="noopener noreferrer">
+                                <button class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">LinkedIn</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <div id="projects" class="w-full mt-4">
+                <h2 class="text-4xl font-bold mb-8 slide-in-element">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
                 </div>
             </div>
-            <!-- Links -->
-            <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
-                <div>
-                    <h1 class="text-2xl mb-4 sm:mb-6 text-center">Hello!</h1>
-                    <h1 class="intro hidden sm:block visible text-4xl font-bold py-2">My name is Yoosup Song</h1>
-                    <h1 class="intro text-4xl sm:hidden font-bold">My name is Yoosup</h1>
-                </div>
-                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6 mx-auto">
-                    <!-- GitHub Button -->
-                    <a href="https://github.com/Youssup" target="_blank">
-                        <button class="learn-more mb-4 sm:mb-0">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">
-                                GitHub
-                            </span>
-                        </button>
-                    </a>
-                    <!-- LinkedIn Button -->
-                    <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">
-                        <button class="learn-more">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">
-                                LinkedIn
-                            </span>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-        <!-- Stats Card - Full Width -->
-        <div class="w-full bg-gradient-to-br from-gray-600 to-gray-900 rounded-3xl p-8 text-white fade-in hover-lift">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="text-center hover-pop">
-            <h3 class="text-3xl font-bold">{{ stats.commits }}</h3>
-            <p class="text-sm">Github Commits</p>
-        </div>
-        <div class="text-center hover-pop">
-            <h3 class="text-3xl font-bold">{{ stats.repositories }}</h3>
-            <p class="text-sm">Repositories</p>
-        </div>
-        <div class="text-center hover-pop">
-            <h3 class="text-3xl font-bold">{{ stats.contributions }}</h3>
-            <p class="text-sm">Contributions</p>
-        </div>
-        <div class="text-center hover-pop">
-            <h3 class="text-3xl font-bold">{{ stats.connections }}</h3>
-            <p class="text-sm">LinkedIn Connections</p>
-        </div>
-    </div>
-</div>
+            <!-- Experience Section -->
+            <div id="experience" class="w-full mt-4 slide-in-element">
+                <h2 class="text-4xl font-bold mb-8">Experience</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Experience cards with slide-in-element class -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
+                        <span class="text-sm text-neutral-500">Sep 2024 - Present</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Private Tutoring</h3>
+                        <p class="text-neutral-600 group-hover:hidden">Providing personalized support and mentoring to
+                            students.</p>
+                        <p class="text-neutral-600 hidden group-hover:block">• Increased student grades by average of
+                            15%<br>• Specialized in Python and web development<br>• Mentored 20+ students</p>
+                    </div>
 
-        <!-- Projects Section -->
-        <div id="projects" class="w-full mt-4 slide-in-element">
-            <h2 class="text-4xl font-bold mb-8 text-neutral-800">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
-            </div>
-        </div>
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
+                        <span class="text-sm text-neutral-500">May 2024 - Present</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Support Engineer</h3>
+                        <p class="text-neutral-600 group-hover:hidden">Technical assistance at Agile InfoTech.</p>
+                        <p class="text-neutral-600 hidden group-hover:block">• Resolved 500+ technical tickets<br>•
+                            Maintained 98% customer satisfaction<br>• Implemented new support workflow</p>
+                    </div>
 
-        <!-- Experience Section -->
-        <div id="experience" class="w-full mt-4 slide-in-element">
-            <h2 class="text-4xl font-bold mb-8 text-neutral-800">Experience</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Experience cards with slide-in-element class -->
-                <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                    <span class="text-sm text-neutral-500">Sep 2024 - Present</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3">Private Tutoring</h3>
-                    <p class="text-neutral-600 group-hover:hidden">Providing personalized support and mentoring to students.</p>
-                    <p class="text-neutral-600 hidden group-hover:block">• Increased student grades by average of 15%<br>• Specialized in Python and web development<br>• Mentored 20+ students</p>
-                </div>
-
-                <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                    <span class="text-sm text-neutral-500">May 2024 - Present</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3">Support Engineer</h3>
-                    <p class="text-neutral-600 group-hover:hidden">Technical assistance at Agile InfoTech.</p>
-                    <p class="text-neutral-600 hidden group-hover:block">• Resolved 500+ technical tickets<br>• Maintained 98% customer satisfaction<br>• Implemented new support workflow</p>
-                </div>
-
-                <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                    <span class="text-sm text-neutral-500">May 2024 - Nov 2024</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3">Freelance Web Developer</h3>
-                    <p class="text-neutral-600 group-hover:hidden">Designing and developing responsive websites.</p>
-                    <p class="text-neutral-600 hidden group-hover:block">• Completed 15+ client projects<br>• Specialized in Vue.js and React<br>• 100% client satisfaction rate</p>
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
+                        <span class="text-sm text-neutral-500">May 2024 - Nov 2024</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Freelance Web Developer</h3>
+                        <p class="text-neutral-600 group-hover:hidden">Designing and developing responsive websites.</p>
+                        <p class="text-neutral-600 hidden group-hover:block">• Completed 15+ client projects<br>•
+                            Specialized in Vue.js and React<br>• 100% client satisfaction rate</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 </template>
 
 <style scoped>
@@ -264,6 +245,7 @@ onMounted(() => {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -296,7 +278,7 @@ button.learn-more .circle {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #282936;
+    background: #374151;
     border-radius: 1.625rem;
 }
 
@@ -338,7 +320,7 @@ button.learn-more .button-text {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: #374151;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -372,56 +354,5 @@ button:hover .button-text {
 
 .hover-pop:hover {
     transform: scale(1.05);
-}
-
-.custom-heading-left {
-    text-align: left !important;
-    /* Override text-center for left alignment */
-    margin-left: 0 !important;
-    /* Ensure no margin on the left */
-}
-
-.custom-heading-left {
-    text-align: left !important;
-    /* Override text-center for larger screens */
-    margin-left: 24px !important;
-    /* Custom margin for md and up screens */
-}
-
-.intro {
-    overflow: hidden;
-    border-right: .15em solid gray;
-    white-space: nowrap;
-    margin: 0 auto;
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #333;
-    animation:
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
-    animation-delay: .3s;
-}
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: gray;
-    }
 }
 </style>
