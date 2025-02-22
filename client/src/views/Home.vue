@@ -1,12 +1,96 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 const stats = ref({
     commits: '500+',
     repositories: '25+',
     contributions: '365+',
-    connections: '200+'
+    connections: '500+'
 });
+
+const projects = ref([
+    {
+        title: 'Better Calendar',
+        description: 'Chrome Extension for intelligent event management with location-based reminders and route optimization',
+        imageUrl: '',
+        features: [
+            'Automated event reminders based on location',
+            'Real-time route optimization with traffic',
+            'AWS Lambda-powered 5-minute interval checks',
+            'Flexible location override settings',
+            'Google Calendar & Maps API integration'
+        ],
+        technologies: [
+            { name: 'React', class: 'bg-blue-100 text-blue-700' },
+            { name: 'Flask', class: 'bg-green-100 text-green-700' },
+            { name: 'Python', class: 'bg-yellow-100 text-yellow-700' },
+            { name: 'AWS', class: 'bg-orange-100 text-orange-700' },
+            { name: 'Google Cloud', class: 'bg-purple-100 text-purple-700' },
+            { name: 'Tailwind', class: 'bg-cyan-100 text-cyan-700' }
+        ]
+    },
+    {
+        title: 'CommUnity',
+        description: 'Full-stack community platform enabling local engagement and resource sharing with real-time updates',
+        imageUrl: '',
+        features: [
+            'Real-time community event tracking',
+            'Resource sharing marketplace',
+            'User authentication and profiles',
+            'Interactive community maps',
+            'Event planning and RSVP system'
+        ],
+        technologies: [
+            { name: 'React', class: 'bg-blue-100 text-blue-700' },
+            { name: 'Node.js', class: 'bg-green-100 text-green-700' },
+            { name: 'MongoDB', class: 'bg-purple-100 text-purple-700' },
+            { name: '', class: 'bg-gray-100 text-gray-700' },
+            { name: '', class: 'bg-red-100 text-red-700' },
+            { name: '', class: 'bg-yellow-100 text-yellow-700' }
+        ]
+    },
+    {
+        title: 'Fitness Tracker',
+        description: 'Comprehensive fitness tracking application with ML-powered workout recommendations and progress analytics',
+        imageUrl: '',
+        features: [
+            'Custom workout plan generation',
+            'Progress tracking and analytics',
+            'Nutrition logging and analysis',
+            'Machine learning recommendations',
+            'Social workout sharing'
+        ],
+        technologies: [
+            { name: '', class: 'bg-blue-100 text-blue-700' },
+            { name: '', class: 'bg-green-100 text-green-700' },
+            { name: '', class: 'bg-purple-100 text-purple-700' },
+            { name: '', class: 'bg-cyan-100 text-cyan-700' },
+            { name: '', class: 'bg-orange-100 text-orange-700' },
+            { name: '', class: 'bg-indigo-100 text-indigo-700' }
+        ]
+    },
+    {
+        title: 'Computation Optimizer',
+        description: 'High-performance computing solution that optimizes computational workflows and resource allocation',
+        imageUrl: '',
+        features: [
+            'Parallel processing optimization',
+            'Resource allocation algorithms',
+            'Performance monitoring dashboard',
+            'Automated workflow scheduling',
+            'Load balancing system'
+        ],
+        technologies: [
+            { name: '', class: 'bg-blue-100 text-blue-700' },
+            { name: '', class: 'bg-green-100 text-green-700' },
+            { name: '', class: 'bg-yellow-100 text-yellow-700' },
+            { name: '', class: 'bg-cyan-100 text-cyan-700' },
+            { name: '', class: 'bg-purple-100 text-purple-700' },
+            { name: '', class: 'bg-orange-100 text-orange-700' }
+        ]
+    }
+]);
 
 onMounted(() => {
     // Fade in observer
@@ -60,7 +144,7 @@ onMounted(() => {
                     <h1 class="intro hidden sm:block visible text-4xl font-bold py-2">My name is Yoosup Song</h1>
                     <h1 class="intro text-4xl sm:hidden font-bold">My name is Yoosup</h1>
                 </div>
-                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
+                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6 mx-auto">
                     <!-- GitHub Button -->
                     <a href="https://github.com/Youssup" target="_blank">
                         <button class="learn-more mb-4 sm:mb-0">
@@ -113,40 +197,8 @@ onMounted(() => {
         <!-- Projects Section -->
         <div id="projects" class="w-full mt-4 slide-in-element">
             <h2 class="text-4xl font-bold mb-8 text-neutral-800">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Project cards remain the same but with slide-in-element class -->
-                <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                    <div class="relative overflow-hidden rounded-xl mb-4">
-                        <img src="" alt="Project 1" class="w-full h-48 object-cover" />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <p class="text-white text-center p-4">A real-time collaborative coding platform built with Vue.js and WebSocket</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold">CodeCollab</h3>
-                    <p class="text-neutral-600 mt-2">Vue.js, Socket.io, Express</p>
-                </div>
-
-                <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                    <div class="relative overflow-hidden rounded-xl mb-4">
-                        <img src=" " alt="Project 2" class="w-full h-48 object-cover" />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <p class="text-white text-center p-4">AI-powered task management system with natural language processing</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold">TaskAI</h3>
-                    <p class="text-neutral-600 mt-2">Python, FastAPI, React</p>
-                </div>
-
-                <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                    <div class="relative overflow-hidden rounded-xl mb-4">
-                        <img src="" alt="Project 3" class="w-full h-48 object-cover" />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <p class="text-white text-center p-4">E-commerce platform with real-time inventory management</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold">ShopSync</h3>
-                    <p class="text-neutral-600 mt-2">Next.js, MongoDB, Stripe</p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
             </div>
         </div>
 
