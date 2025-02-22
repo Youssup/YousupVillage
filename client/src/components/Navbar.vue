@@ -1,35 +1,73 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+const isHovered = ref(false)
+const isAtTop = ref(true)
+const isVisible = ref(true)
+
+const handleScroll = () => {
+  const atTop = window.scrollY < 10
+  isAtTop.value = atTop
+  
+  // If we're at the top, always show the navbar
+  if (atTop) {
+    isVisible.value = true
+  }
+  // Only hide when not at top and not hovered
+  else if (!isHovered.value) {
+    isVisible.value = false
+  }
+}
+
+const handleMouseEnter = () => {
+  isHovered.value = true
+  isVisible.value = true
+}
+
+const handleMouseLeave = () => {
+  isHovered.value = false
+  if (!isAtTop.value) {
+    isVisible.value = false
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <section class="fixed top-0 left-0 w-full bg-white opacity-0 transition-opacity duration-500 hover:opacity-100 shadow-md z-50 h-18">
-  <div class="navbar">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-2 shadow">
-            <li><a href="#header">Home</a></li>
-          <li><a href="#experience">Experience</a></li>
-        </ul>
+  <nav 
+    class="fixed top-0 w-full backdrop-blur-sm z-50 transition-all duration-300 ease-in-out"
+    :class="[
+      {'opacity-100': isVisible || isHovered},
+      {'opacity-0': !isVisible && !isHovered},
+      {'bg-white/80 shadow-sm': isHovered || isAtTop},
+      {'bg-transparent': !isHovered && !isAtTop}
+    ]"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold transition-opacity duration-300">YS</h1>
+      <div class="flex gap-6 py-4">
+        <a href="#home" class="hover-grow transition-opacity duration-300 text-xl">Home</a>
+        <a href="#experience" class="hover-grow transition-opacity duration-300 text-xl">Experience</a>
+        <a href="#projects" class="hover-grow transition-opacity duration-300 text-xl">Projects</a>
+        <a href="#contact" class="hover-grow transition-opacity duration-300 text-xl">Contact</a>
       </div>
-      <!-- <RouterLink to="/"><a class="btn btn-ghost text-xl">Yoosup Song</a></RouterLink> -->
     </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-          <li><a href="#header" class="text-xl text-bold">Home</a></li>
-        <li><a href="#experience" class="text-xl text-bold">Experience</a></li>
-      </ul>
-    </div>
-    <div class="navbar-end">
-    </div>
-  </div>
-</section>
+  </nav>
 </template>
 
 <style scoped>
+.hover-grow {
+  transition: transform 0.2s ease-out;
+}
+.hover-grow:hover {
+  transform: scale(1.05);
+}
 </style>
