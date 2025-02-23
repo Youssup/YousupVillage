@@ -21,12 +21,41 @@ const projects = ref([
             'Google Calendar & Maps API integration'
         ],
         technologies: [
-            { name: 'React', class: 'bg-blue-100 text-blue-700' },
-            { name: 'Flask', class: 'bg-green-100 text-green-700' },
-            { name: 'Python', class: 'bg-yellow-100 text-yellow-700' },
-            { name: 'AWS', class: 'bg-orange-100 text-orange-700' },
-            { name: 'Google Cloud', class: 'bg-purple-100 text-purple-700' },
-            { name: 'Tailwind', class: 'bg-cyan-100 text-cyan-700' }
+            {
+                name: 'React',
+                badgeUrl: 'https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB',
+                url: 'https://reactjs.org/'
+            },
+            {
+                name: 'Flask',
+                badgeUrl: 'https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white',
+                url: 'https://flask.palletsprojects.com/'
+            },
+            {
+                name: 'Python',
+                badgeUrl: 'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
+                url: 'https://www.python.org/'
+            },
+            {
+                name: 'JavaScript',
+                badgeUrl: 'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black',
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+            },
+            {
+                name: 'Tailwind CSS',
+                badgeUrl: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
+                url: 'https://tailwindcss.com/'
+            },
+            {
+                name: 'Google Cloud',
+                badgeUrl: 'https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white',
+                url: 'https://cloud.google.com/'
+            },
+            {
+                name: 'AWS',
+                badgeUrl: 'https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white',
+                url: 'https://aws.amazon.com/'
+            }
         ]
     },
     {
@@ -35,15 +64,39 @@ const projects = ref([
         imageUrl: CommUnity,
         features: [
             'Real-time community event tracking',
-            'Resource sharing marketplace',
+            'Resource sharing marketplace'
         ],
         technologies: [
-            { name: 'React', class: 'bg-blue-100 text-blue-700' },
-            { name: 'Node.js', class: 'bg-green-100 text-green-700' },
-            { name: 'MongoDB', class: 'bg-purple-100 text-purple-700' },
-            { name: '', class: 'bg-gray-100 text-gray-700' },
-            { name: '', class: 'bg-red-100 text-red-700' },
-            { name: '', class: 'bg-yellow-100 text-yellow-700' }
+            {
+                name: 'Vue.js',
+                badgeUrl: 'https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white',
+                url: 'https://vuejs.org/'
+            },
+            {
+                name: 'Express.js',
+                badgeUrl: 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white',
+                url: 'https://expressjs.com/'
+            },
+            {
+                name: 'Node.js',
+                badgeUrl: 'https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white',
+                url: 'https://nodejs.org/'
+            },
+            {
+                name: 'MongoDB',
+                badgeUrl: 'https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white',
+                url: 'https://www.mongodb.com/'
+            },
+            {
+                name: 'TypeScript',
+                badgeUrl: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white',
+                url: 'https://www.typescriptlang.org/'
+            },
+            {
+                name: 'Tailwind CSS',
+                badgeUrl: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
+                url: 'https://tailwindcss.com/'
+            }
         ]
     },
     {
@@ -57,12 +110,31 @@ const projects = ref([
             'Admin dashboard for user management'
         ],
         technologies: [
-            { name: '', class: 'bg-blue-100 text-blue-700' },
-            { name: '', class: 'bg-green-100 text-green-700' },
-            { name: '', class: 'bg-purple-100 text-purple-700' },
-            { name: '', class: 'bg-cyan-100 text-cyan-700' },
-            { name: '', class: 'bg-orange-100 text-orange-700' },
-            { name: '', class: 'bg-indigo-100 text-indigo-700' }
+            {
+                name: 'Vue.js',
+                badgeUrl: 'https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white',
+                url: 'https://vuejs.org/'
+            },
+            {
+                name: 'Express.js',
+                badgeUrl: 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white',
+                url: 'https://expressjs.com/'
+            },
+            {
+                name: 'Node.js',
+                badgeUrl: 'https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white',
+                url: 'https://nodejs.org/'
+            },
+            {
+                name: 'TypeScript',
+                badgeUrl: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white',
+                url: 'https://www.typescriptlang.org/'
+            },
+            {
+                name: 'Bulma',
+                badgeUrl: 'https://img.shields.io/badge/Bulma-00D1B2?style=for-the-badge&logo=bulma&logoColor=white',
+                url: 'https://bulma.io/'
+            }
         ]
     },
     {
@@ -70,20 +142,40 @@ const projects = ref([
         description: 'High-performance computing solution that optimizes computational workflows and resource allocation',
         imageUrl: ComputationOptimizer,
         features: [
-            'multi-threading and dynamic programming',
+            'Multi-threading and dynamic programming',
             '90% increase in computational efficiency',
-            'Resource allocation and optimization',
+            'Resource allocation and optimization'
         ],
         technologies: [
-            { name: '', class: 'bg-blue-100 text-blue-700' },
-            { name: '', class: 'bg-green-100 text-green-700' },
-            { name: '', class: 'bg-yellow-100 text-yellow-700' },
-            { name: '', class: 'bg-cyan-100 text-cyan-700' },
-            { name: '', class: 'bg-purple-100 text-purple-700' },
-            { name: '', class: 'bg-orange-100 text-orange-700' }
+            {
+                name: 'Java',
+                badgeUrl: 'https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white',
+                url: 'https://www.java.com/'
+            },
+            {
+                name: 'JUnit',
+                badgeUrl: 'https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white',
+                url: 'https://junit.org/junit5/'
+            },
+            {
+                name: 'Mockito',
+                badgeUrl: 'https://img.shields.io/badge/Mockito-FF9900?style=for-the-badge&logo=mockito&logoColor=white',
+                url: 'https://site.mockito.org/'
+            },
+            {
+                name: 'gRPC',
+                badgeUrl: 'https://img.shields.io/badge/gRPC-4285F4?style=for-the-badge&logo=grpc&logoColor=white',
+                url: 'https://grpc.io/'
+            },
+            {
+                name: 'Gradle',
+                badgeUrl: 'https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white',
+                url: 'https://gradle.org/'
+            }
         ]
     }
 ]);
+
 
 onMounted(() => {
     if (window.customElements && !customElements.get("animated-icons")) {
