@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import Background from '../components/Background.vue';
