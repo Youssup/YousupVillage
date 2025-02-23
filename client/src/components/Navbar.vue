@@ -57,7 +57,6 @@ onUnmounted(() => {
         <a href="#home" class="hover-grow transition-opacity duration-300 text-xl">Home</a>
         <a href="#experience" class="hover-grow transition-opacity duration-300 text-xl">Experience</a>
         <a href="#projects" class="hover-grow transition-opacity duration-300 text-xl">Projects</a>
-        <a href="#contact" class="hover-grow transition-opacity duration-300 text-xl">Contact</a>
       </div>
     </div>
   </nav>

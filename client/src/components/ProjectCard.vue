@@ -4,7 +4,7 @@
         <img 
           :src="project.imageUrl" 
           :alt="project.title" 
-          class="w-full h-72 object-cover" 
+          class="h-96 object-cover" 
         />
         <div class="absolute inset-0 bg-black/70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div class="text-white text-center p-6">

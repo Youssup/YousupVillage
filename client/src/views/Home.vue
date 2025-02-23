@@ -1,13 +1,18 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
-import image from '../assets/images/CommUnity.jpg'
 import Background from '../components/Background.vue';
+import CommUnity from '../assets/images/CommUnity.jpg';
+import BetterCalendar from '../assets/images/Better-Calendar.png';
+import FitnessTracker from '../assets/images/Fitness-Tracker.png';
+import ComputationOptimizer from '../assets/images/Computation-Optimizer.png';
+
+
 const projects = ref([
     {
         title: 'Better Calendar',
         description: 'Chrome Extension for intelligent event management with location-based reminders and route optimization',
-        imageUrl: '../assets/images/better-calendar.png',
+        imageUrl: BetterCalendar,
         features: [
             'Automated event reminders based on location',
             'Real-time route optimization with traffic',
@@ -27,13 +32,10 @@ const projects = ref([
     {
         title: 'CommUnity',
         description: 'Full-stack community platform enabling local engagement and resource sharing with real-time updates',
-        imageUrl: image,
+        imageUrl: CommUnity,
         features: [
             'Real-time community event tracking',
             'Resource sharing marketplace',
-            'User authentication and profiles',
-            'Interactive community maps',
-            'Event planning and RSVP system'
         ],
         technologies: [
             { name: 'React', class: 'bg-blue-100 text-blue-700' },
@@ -47,13 +49,12 @@ const projects = ref([
     {
         title: 'Fitness Tracker',
         description: 'Comprehensive fitness tracking application with ML-powered workout recommendations and progress analytics',
-        imageUrl: '',
+        imageUrl: FitnessTracker,
         features: [
-            'Custom workout plan generation',
             'Progress tracking and analytics',
-            'Nutrition logging and analysis',
-            'Machine learning recommendations',
-            'Social workout sharing'
+            'Social workout sharing',
+            'Local login and data storage',
+            'Admin dashboard for user management'
         ],
         technologies: [
             { name: '', class: 'bg-blue-100 text-blue-700' },
@@ -67,13 +68,11 @@ const projects = ref([
     {
         title: 'Computation Optimizer',
         description: 'High-performance computing solution that optimizes computational workflows and resource allocation',
-        imageUrl: '',
+        imageUrl: ComputationOptimizer,
         features: [
-            'Parallel processing optimization',
-            'Resource allocation algorithms',
-            'Performance monitoring dashboard',
-            'Automated workflow scheduling',
-            'Load balancing system'
+            'multi-threading and dynamic programming',
+            '90% increase in computational efficiency',
+            'Resource allocation and optimization',
         ],
         technologies: [
             { name: '', class: 'bg-blue-100 text-blue-700' },
