@@ -1,9 +1,205 @@
-<script setup lang="ts">
-import { onMounted } from 'vue';
+<script setup>
+import { onMounted, ref } from 'vue';
+import ProjectCard from '../components/ProjectCard.vue';
+import Background from '../components/Background.vue';
+import CommUnity from '../assets/images/CommUnity.jpg';
+import BetterCalendar from '../assets/images/Better-Calendar.png';
+import FitnessTracker from '../assets/images/Fitness-Tracker.png';
+import ComputationOptimizer from '../assets/images/Computation-Optimizer.png';
+
+
+const projects = ref([
+    {
+        title: 'Better Calendar',
+        description: 'Chrome Extension for intelligent event management with location-based reminders and route optimization',
+        imageUrl: BetterCalendar,
+        githubUrl: 'https://github.com/Youssup/BetterCalendar',
+        features: [
+            'Automated event reminders based on location',
+            'Real-time route optimization with traffic',
+            'AWS Lambda-powered 5-minute interval checks',
+            'Flexible location override settings',
+            'Google Calendar & Maps API integration'
+        ],
+        technologies: [
+            {
+                name: 'React',
+                badgeUrl: 'https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB',
+                url: 'https://reactjs.org/'
+            },
+            {
+                name: 'Flask',
+                badgeUrl: 'https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white',
+                url: 'https://flask.palletsprojects.com/'
+            },
+            {
+                name: 'Python',
+                badgeUrl: 'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
+                url: 'https://www.python.org/'
+            },
+            {
+                name: 'JavaScript',
+                badgeUrl: 'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black',
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+            },
+            {
+                name: 'Tailwind CSS',
+                badgeUrl: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
+                url: 'https://tailwindcss.com/'
+            },
+            {
+                name: 'Google Cloud',
+                badgeUrl: 'https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white',
+                url: 'https://cloud.google.com/'
+            },
+            {
+                name: 'AWS',
+                badgeUrl: 'https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white',
+                url: 'https://aws.amazon.com/'
+            }
+        ]
+    },
+    {
+        title: 'CommUnity',
+        description: 'Full-stack community platform enabling local engagement and resource sharing with real-time updates',
+        imageUrl: CommUnity,
+        features: [
+            'Real-time community event tracking',
+            'Resource sharing marketplace'
+        ],
+        technologies: [
+            {
+                name: 'Vue.js',
+                badgeUrl: 'https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white',
+                url: 'https://vuejs.org/'
+            },
+            {
+                name: 'Express.js',
+                badgeUrl: 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white',
+                url: 'https://expressjs.com/'
+            },
+            {
+                name: 'Node.js',
+                badgeUrl: 'https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white',
+                url: 'https://nodejs.org/'
+            },
+            {
+                name: 'MongoDB',
+                badgeUrl: 'https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white',
+                url: 'https://www.mongodb.com/'
+            },
+            {
+                name: 'TypeScript',
+                badgeUrl: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white',
+                url: 'https://www.typescriptlang.org/'
+            },
+            {
+                name: 'Tailwind CSS',
+                badgeUrl: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
+                url: 'https://tailwindcss.com/'
+            }
+        ]
+    },
+    {
+        title: 'Fitness Tracker',
+        description: 'Comprehensive fitness tracking application with ML-powered workout recommendations and progress analytics',
+        imageUrl: FitnessTracker,
+        features: [
+            'Progress tracking and analytics',
+            'Social workout sharing',
+            'Local login and data storage',
+            'Admin dashboard for user management'
+        ],
+        technologies: [
+            {
+                name: 'Vue.js',
+                badgeUrl: 'https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white',
+                url: 'https://vuejs.org/'
+            },
+            {
+                name: 'Express.js',
+                badgeUrl: 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white',
+                url: 'https://expressjs.com/'
+            },
+            {
+                name: 'Node.js',
+                badgeUrl: 'https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white',
+                url: 'https://nodejs.org/'
+            },
+            {
+                name: 'TypeScript',
+                badgeUrl: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white',
+                url: 'https://www.typescriptlang.org/'
+            },
+            {
+                name: 'Bulma',
+                badgeUrl: 'https://img.shields.io/badge/Bulma-00D1B2?style=for-the-badge&logo=bulma&logoColor=white',
+                url: 'https://bulma.io/'
+            }
+        ]
+    },
+    {
+        title: 'Computation Optimizer',
+        description: 'High-performance computing solution that optimizes computational workflows and resource allocation',
+        imageUrl: ComputationOptimizer,
+        features: [
+            'Multi-threading and dynamic programming',
+            '90% increase in computational efficiency',
+            'Resource allocation and optimization'
+        ],
+        technologies: [
+            {
+                name: 'Java',
+                badgeUrl: 'https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white',
+                url: 'https://www.java.com/'
+            },
+            {
+                name: 'JUnit',
+                badgeUrl: 'https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white',
+                url: 'https://junit.org/junit5/'
+            },
+            {
+                name: 'Mockito',
+                badgeUrl: 'https://img.shields.io/badge/Mockito-FF9900?style=for-the-badge&logo=mockito&logoColor=white',
+                url: 'https://site.mockito.org/'
+            },
+            {
+                name: 'gRPC',
+                badgeUrl: 'https://img.shields.io/badge/gRPC-4285F4?style=for-the-badge&logo=grpc&logoColor=white',
+                url: 'https://grpc.io/'
+            },
+            {
+                name: 'Gradle',
+                badgeUrl: 'https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white',
+                url: 'https://gradle.org/'
+            }
+        ]
+    }
+]);
+
 
 onMounted(() => {
-    const elements = document.querySelectorAll('.slide-in-element');
-    const observer = new IntersectionObserver((entries, observer) => {
+    if (window.customElements && !customElements.get("animated-icons")) {
+        const script = document.createElement("script");
+        script.src = "https://animatedicons.co/scripts/embed-animated-icons.js";
+        document.body.appendChild(script);
+    }
+    // Fade in observer
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(element => fadeObserver.observe(element));
+
+    // Slide in observer
+    const slideElements = document.querySelectorAll('.slide-in-element');
+    const slideObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 if (!entry.target.classList.contains('animated')) {
@@ -14,194 +210,98 @@ onMounted(() => {
             }
         });
     }, { threshold: 0.5 });
-    elements.forEach((element) => observer.observe(element));
+    slideElements.forEach((element) => slideObserver.observe(element));
 });
 </script>
 
 <template>
-    <!-- Header -->
-    <section id="header" class="container mx-auto min-h-screen flex flex-col justify-center items-center text-center">
-        <h1 class="lg:self-start text-3xl md:text-5xl font-bold lg:ml-4 text-center ">Software</h1>
-        <h1 class="lg:self-start text-3xl md:text-5xl lg:ml-24 font-bold text-center ">Engineer</h1>
-        <div class="hero-content flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
-            <!-- Profile Picture -->
-            <div class="avatar mb-6">
-                <div class="w-64 md:w-72 lg:w-96 xl:w-10/12 rounded-full ring ring-neutral-400">
-                    <img src="../assets/images/profile.jpg" alt="Profile" />
+    <Background>
+        <!-- Header -->
+        <section class="container mx-auto min-h-screen flex items-center justify-center">
+            <div class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                <!-- Profile Picture -->
+                <div id="home" class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
+                    <div class="w-full aspect-square rounded-full ring ring-neutral-400 overflow-hidden">
+                        <img src="../assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <!-- Text Content -->
+                <div class="flex-1 flex flex-col items-center text-center">
+                    <h1 class="text-2xl md:text-3xl mb-2">Yoosup Song</h1>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Backend Software Engineer</h2>
+                    <p class="text-gray-500">
+                        <span>
+                            <img src="../assets/icons/location-pin.svg" alt=""
+                                class="w-4 h-4 inline-block fill-gray-500" />
+                        </span>
+                        Based in the U.S.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex flex-row justify-center gap-4 mt-8">
+                        <!-- GitHub Button -->
+                        <a href="https://github.com/Youssup" target="_blank" rel="noopener noreferrer">
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Github</span>
+                            </button>
+                        </a>
+                        <!-- LinkedIn Button -->
+                        <a href="https://www.linkedin.com/in/yousupsong/" target="_blank" rel="noopener noreferrer">
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">LinkedIn</span>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <!-- Links -->
-            <div class="my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
-                <div>
-                    <h1 class="text-2xl mb-4 sm:mb-6 text-center">Hello!</h1>
-                    <h1 class="intro hidden sm:block visible text-4xl font-bold">My name is Yoosup Song</h1>
-                    <h1 class="intro text-4xl sm:hidden font-bold">My name is Yoosup</h1>
-                </div>
-                <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
-                    <!-- GitHub Button -->
-                    <a href="https://github.com/Youssup" target="_blank">
-                        <button class="learn-more mb-4 sm:mb-0">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">
-                                GitHub
-                            </span>
-                        </button>
-                    </a>
-                    <!-- LinkedIn Button -->
-                    <a href="https://www.linkedin.com/in/yousupsong/" target="_blank">
-                        <button class="learn-more">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">
-                                LinkedIn
-                            </span>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="absolute bottom-0 left-0 right-0 w-full">
+        <svg class="w-full h-32" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 100V30C25 -10 75 -10 100 30V100H0Z" fill="url(#gradient)"/>
+            <defs>
+                <linearGradient id="gradient" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="white"/>
+                    <stop offset="100%" stop-color="#E5E7EB"/> <!-- This is the Tailwind gray-200 color -->
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+        </section>
+    </Background>
+    <div class="bg-gray-200 pb-28">
+            <!-- Experience Section -->
+             
 
-    <!-- Experience -->
-    <section id="experience">
-        <h1 class="ml-8 text-6xl md:text-8xl md:ml-20 font-bold text-gray-400 slide-in-element">Experience</h1>
-        <div
-            class="mx-auto max-w-7xl px-8 md:px-12 lg:px-32 my-10 divide-y prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl space-y-10 text-black text-sm">
-            <div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>Sep 2024 - Present</p>
-                            <p>(3 months)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">Private
-                                Tutoring</p>
-                            <p class="line-clamp-4">As a freelance tutor, I provide personalized support to students,
-                                helping them with various academic subjects. My focus includes student development,
-                                mentoring, and offering guidance in both technical and non-technical areas. I adapt my
-                                teaching style to meet individual needs, ensuring effective learning outcomes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>May 2024 - Present</p>
-                            <p>(7 months)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Support Engineer at Agile InfoTech</p>
-                            <p class="line-clamp-4">As a Support Engineer at Agile InfoTech, I provided technical assistance to
-                                clients, troubleshooting hardware and software issues, and ensured effective
-                                communication to address their needs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>May 2024 - Nov 2024</p>
-                            <p>(7 months)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Freelance Web Developer</p>
-                            <p class="line-clamp-4">As a Freelance Web Developer, I designed, developed, and deployed
-                                responsive websites tailored to meet client needs. I worked closely with clients to
-                                understand their objectives, ensuring the final product aligned with their vision.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>August 2022 - Present</p>
-                            <p>(2 years 4 months)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                President of Eleet Coders </p>
-                            <p class="line-clamp-4">As President of Eleet Coders, I managed club communications,
-                                organized events and workshops, and fostered a collaborative learning environment to
-                                support members' professional growth. I also taught technical concepts and facilitated
-                                events to enhance members' skills and career readiness.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>Sep 2023 - Oct 2024</p>
-                            <p>(1 year 2 months)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Sales Associate at Club Monaco</p>
-                            <p class="line-clamp-4">As a Sales Associate at Club Monaco, I provided excellent customer
-                                service by assisting clients, prioritizing tasks under pressure, and exceeding sales
-                                expectations through clear communication in a dynamic environment.</p>
-                        </div>
-                    </div>
+        <div class="max-w-7xl mx-auto flex flex-col gap-8 pt-4">
+            <!-- Projects Section -->
+            <div id="projects" class="w-full mt-4">
+                <h2 class="text-4xl font-bold mb-8 slide-in-element">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
-<style>
-.custom-heading-left {
-    text-align: left !important;
-    /* Override text-center for left alignment */
-    margin-left: 0 !important;
-    /* Ensure no margin on the left */
+<style scoped>
+/* Previous styles remain the same */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.custom-heading-left {
-    text-align: left !important;
-    /* Override text-center for larger screens */
-    margin-left: 24px !important;
-    /* Custom margin for md and up screens */
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+/* Add new slide-in animation styles */
 .slide-in-element {
     opacity: 0;
     transform: translateY(100px);
@@ -224,27 +324,6 @@ html {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-
-.puff-in-center {
-    -webkit-animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both;
-    animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both
-}
-
-.intro {
-    overflow: hidden;
-    border-right: .15em solid gray;
-    white-space: nowrap;
-    margin: 0 auto;
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #333;
-    animation:
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
-    animation-delay: .3s;
 }
 
 button {
@@ -273,7 +352,7 @@ button.learn-more .circle {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #282936;
+    background: #374151;
     border-radius: 1.625rem;
 }
 
@@ -315,7 +394,7 @@ button.learn-more .button-text {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: #374151;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -335,61 +414,19 @@ button:hover .button-text {
     color: #fff;
 }
 
-@-webkit-keyframes puff-in-center {
-    0% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        -webkit-filter: blur(4px);
-        filter: blur(4px);
-        opacity: 0
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-filter: blur(0);
-        filter: blur(0);
-        opacity: 1
-    }
+.hover-lift {
+    transition: transform 0.3s ease;
 }
 
-@keyframes puff-in-center {
-    0% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        -webkit-filter: blur(4px);
-        filter: blur(4px);
-        opacity: 0
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-filter: blur(0);
-        filter: blur(0);
-        opacity: 1
-    }
+.hover-lift:hover {
+    transform: translateY(-5px);
 }
 
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
+.hover-pop {
+    transition: transform 0.2s ease;
 }
 
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: gray;
-    }
+.hover-pop:hover {
+    transform: scale(1.05);
 }
 </style>
