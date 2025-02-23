@@ -13,6 +13,7 @@ const projects = ref([
         title: 'Better Calendar',
         description: 'Chrome Extension for intelligent event management with location-based reminders and route optimization',
         imageUrl: BetterCalendar,
+        githubUrl: 'https://github.com/Youssup/BetterCalendar',
         features: [
             'Automated event reminders based on location',
             'Real-time route optimization with traffic',
@@ -219,7 +220,7 @@ onMounted(() => {
         <section class="container mx-auto min-h-screen flex items-center justify-center">
             <div class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
                 <!-- Profile Picture -->
-                <div class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
+                <div id="home" class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
                     <div class="w-full aspect-square rounded-full ring ring-neutral-400 overflow-hidden">
                         <img src="../assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
                     </div>
@@ -271,45 +272,16 @@ onMounted(() => {
     </div>
         </section>
     </Background>
-    <div class="bg-gray-200">
+    <div class="bg-gray-200 pb-28">
+            <!-- Experience Section -->
+             
+
         <div class="max-w-7xl mx-auto flex flex-col gap-8 pt-4">
             <!-- Projects Section -->
             <div id="projects" class="w-full mt-4">
                 <h2 class="text-4xl font-bold mb-8 slide-in-element">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
-                </div>
-            </div>
-
-            <!-- Experience Section -->
-            <div id="experience" class="w-full mt-4 slide-in-element">
-                <h2 class="text-4xl font-bold mb-8">Experience</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Experience cards with slide-in-element class -->
-                    <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                        <span class="text-sm text-neutral-500">Sep 2024 - Present</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Private Tutoring</h3>
-                        <p class="text-neutral-600 group-hover:hidden">Providing personalized support and mentoring to
-                            students.</p>
-                        <p class="text-neutral-600 hidden group-hover:block">• Increased student grades by average of
-                            15%<br>• Specialized in Python and web development<br>• Mentored 20+ students</p>
-                    </div>
-
-                    <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                        <span class="text-sm text-neutral-500">May 2024 - Present</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Support Engineer</h3>
-                        <p class="text-neutral-600 group-hover:hidden">Technical assistance at Agile InfoTech.</p>
-                        <p class="text-neutral-600 hidden group-hover:block">• Resolved 500+ technical tickets<br>•
-                            Maintained 98% customer satisfaction<br>• Implemented new support workflow</p>
-                    </div>
-
-                    <div class="bg-white rounded-3xl p-6 shadow-sm hover-lift group">
-                        <span class="text-sm text-neutral-500">May 2024 - Nov 2024</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Freelance Web Developer</h3>
-                        <p class="text-neutral-600 group-hover:hidden">Designing and developing responsive websites.</p>
-                        <p class="text-neutral-600 hidden group-hover:block">• Completed 15+ client projects<br>•
-                            Specialized in Vue.js and React<br>• 100% client satisfaction rate</p>
-                    </div>
                 </div>
             </div>
         </div>
