@@ -217,10 +217,10 @@ onMounted(() => {
 <template>
     <Background>
         <!-- Header -->
-        <section class="container mx-auto min-h-screen flex items-center justify-center">
+        <section id="home" class="container mx-auto min-h-screen flex items-center justify-center">
             <div class="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
                 <!-- Profile Picture -->
-                <div id="home" class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
+                <div class="w-72 md:w-80 lg:w-1/2 xxl:w-8/12 flex-shrink-0 flex items-center justify-center">
                     <div class="w-full aspect-square rounded-full ring ring-neutral-400 overflow-hidden">
                         <img src="../assets/images/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
                     </div>
@@ -259,26 +259,27 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-0 left-0 right-0 w-full">
-        <svg class="w-full h-32" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 100V30C25 -10 75 -10 100 30V100H0Z" fill="url(#gradient)"/>
-            <defs>
-                <linearGradient id="gradient" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="white"/>
-                    <stop offset="100%" stop-color="#E5E7EB"/> <!-- This is the Tailwind gray-200 color -->
-                </linearGradient>
-            </defs>
-        </svg>
-    </div>
         </section>
     </Background>
+    <div class="absolute bottom-0 left-0 right-0 w-full">
+                <svg class="w-full h-32" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 100V30C25 -10 75 -10 100 30V100H0Z" fill="url(#gradient)" />
+                    <defs>
+                        <linearGradient id="gradient" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="white" />
+                            <stop offset="100%" stop-color="#E5E7EB" /> <!-- This is the Tailwind gray-200 color -->
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
     <div class="bg-gray-200 pb-28">
-            <!-- Experience Section -->
-             
+        <!-- Experience Section -->
 
-        <div class="max-w-7xl mx-auto flex flex-col gap-8 pt-4">
+
+        <div id="projects" class="max-w-7xl mx-auto flex flex-col gap-8 pt-4">
             <!-- Projects Section -->
-            <div id="projects" class="w-full mt-4">
+            <div class="w-full mt-4">
                 <h2 class="text-4xl font-bold mb-8 slide-in-element">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
