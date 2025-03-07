@@ -67,6 +67,7 @@ const projects = ref([
             'Real-time community event tracking',
             'Resource sharing marketplace'
         ],
+        githubUrl: 'https://github.com/Youssup/CommUnity',
         technologies: [
             {
                 name: 'Vue.js',
@@ -104,6 +105,8 @@ const projects = ref([
         title: 'Fitness Tracker',
         description: 'Comprehensive fitness tracking application with ML-powered workout recommendations and progress analytics',
         imageUrl: FitnessTracker,
+        githubUrl: 'https://github.com/Youssup/Fitness-Website',
+        demoUrl: 'https://hackrpi-1.onrender.com/',
         features: [
             'Progress tracking and analytics',
             'Social workout sharing',
@@ -147,6 +150,7 @@ const projects = ref([
             '90% increase in computational efficiency',
             'Resource allocation and optimization'
         ],
+        githubUrl: 'https://github.com/Youssup/Computation-Optimizer',
         technologies: [
             {
                 name: 'Java',
