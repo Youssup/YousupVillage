@@ -3,12 +3,72 @@ import { onMounted, ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import Background from '../components/Background.vue';
 import CommUnity from '../assets/images/CommUnity.jpg';
+import QView3D from '../assets/images/QView3D.png';
 import BetterCalendar from '../assets/images/Better-Calendar.png';
 import FitnessTracker from '../assets/images/Fitness-Tracker.png';
 import ComputationOptimizer from '../assets/images/Computation-Optimizer.png';
 
 
 const projects = ref([
+    {
+        "title": "QView3D",
+        "description": "Open-source 3D printing software developed at SUNY's Hydra Lab, designed to streamline the management and communication of 3D printing files to printer arrays.",
+        "imageUrl": QView3D,
+        "githubUrl": "https://github.com/sunyhydralab/QView3D",
+        "features": [
+            "Streamlined file management for 3D printing workflows",
+            "Efficient communication between users and 3D printers",
+            "Real-time 3D model layer-by-layer virtual print previews",
+            "Job prioritization and history tracking using local database storage."
+        ],
+        "technologies": [
+            {
+                "name": "Python",
+                "badgeUrl": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
+                "url": "https://www.python.org/"
+            },
+            {
+                "name": "Flask",
+                "badgeUrl": "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white",
+                "url": "https://flask.palletsprojects.com/"
+            },
+            {
+                "name": "SQLite/SQLAlchemy",
+                "badgeUrl": "https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white",
+                "url": "https://www.sqlite.org/"
+            },
+            {
+                "name": "TypeScript",
+                "badgeUrl": "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+                "url": "https://www.typescriptlang.org/"
+            },
+            {
+                "name": "Vue.js",
+                "badgeUrl": "https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white",
+                "url": "https://vuejs.org/"
+            },
+            {
+                "name": "Node.js",
+                "badgeUrl": "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white",
+                "url": "https://nodejs.org/"
+            },
+            {
+                "name": "Bootstrap",
+                "badgeUrl": "https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white",
+                "url": "https://getbootstrap.com/"
+            },
+            {
+                "name": "HTML/CSS",
+                "badgeUrl": "https://img.shields.io/badge/HTML/CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+                "name": "Docker",
+                "badgeUrl": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+                "url": "https://www.docker.com/"
+            }
+        ]
+    },
     {
         title: 'Better Calendar',
         description: 'Chrome Extension for intelligent event management with location-based reminders and route optimization',
@@ -267,129 +327,137 @@ onMounted(() => {
         </section>
     </Background>
     <div class="absolute bottom-0 left-0 right-0 w-full">
-                <svg class="w-full h-32" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 100V30C25 -10 75 -10 100 30V100H0Z" fill="url(#gradient)" />
-                    <defs>
-                        <linearGradient id="gradient" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="white" />
-                            <stop offset="100%" stop-color="#E5E7EB" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
+        <svg class="w-full h-32" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 100V30C25 -10 75 -10 100 30V100H0Z" fill="url(#gradient)" />
+            <defs>
+                <linearGradient id="gradient" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="white" />
+                    <stop offset="100%" stop-color="#E5E7EB" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
     <div class="bg-gray-200 pb-28">
         <!-- Experience -->
-    <section id="experience">
-        <h2 class="text-4xl font-bold mb-8 slide-in-element pl-10">Experience</h2>
-        <div
-            class="mx-auto max-w-7xl px-8 md:px-12 lg:px-32 my-10 divide-y prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl space-y-10 text-black text-sm">
-            <div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
+        <section id="experience">
+            <h2 class="text-4xl font-bold mb-8 slide-in-element pl-10">Experience</h2>
+            <div
+                class="mx-auto max-w-7xl px-8 md:px-12 lg:px-32 my-10 divide-y prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl space-y-10 text-black text-sm">
                 <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>Sep 2024 - Present</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
+                    <div>
+                        <div class="lg:sticky lg:pb-16 top-0">
+                            <div class="pt-8">
+                                <p>Sep 2024 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 pt-8">
+                        <div class="flex-shrink-0">
+                            <div class="mx-auto">
+                                <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                    Private
+                                    Tutoring</p>
+                                <p class="line-clamp-4">As a freelance tutor, I provide personalized support to
+                                    students,
+                                    helping them with various academic subjects. My focus includes student development,
+                                    mentoring, and offering guidance in both technical and non-technical areas. I adapt
+                                    my
+                                    teaching style to meet individual needs, ensuring effective learning outcomes.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">Private
-                                Tutoring</p>
-                            <p class="line-clamp-4">As a freelance tutor, I provide personalized support to students,
-                                helping them with various academic subjects. My focus includes student development,
-                                mentoring, and offering guidance in both technical and non-technical areas. I adapt my
-                                teaching style to meet individual needs, ensuring effective learning outcomes.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
+                    <div>
+                        <div class="lg:sticky lg:pb-16 top-0">
+                            <div class="pt-8">
+                                <p>May 2024 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 pt-8">
+                        <div class="flex-shrink-0">
+                            <div class="mx-auto ">
+                                <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                    Support Engineer at Agile InfoTech</p>
+                                <p class="line-clamp-4">As a Support Engineer at Agile InfoTech, I provided technical
+                                    assistance to
+                                    clients, troubleshooting hardware and software issues, and ensured effective
+                                    communication to address their needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
+                    <div>
+                        <div class="lg:sticky lg:pb-16 top-0">
+                            <div class="pt-8">
+                                <p>May 2024 - Nov 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 pt-8">
+                        <div class="flex-shrink-0">
+                            <div class="mx-auto ">
+                                <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                    Freelance Web Developer</p>
+                                <p class="line-clamp-4">As a Freelance Web Developer, I designed, developed, and
+                                    deployed
+                                    responsive websites tailored to meet client needs. I worked closely with clients to
+                                    understand their objectives, ensuring the final product aligned with their vision.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
+                    <div>
+                        <div class="lg:sticky lg:pb-16 top-0">
+                            <div class="pt-8">
+                                <p>August 2022 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 pt-8">
+                        <div class="flex-shrink-0">
+                            <div class="mx-auto ">
+                                <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                    President of Eleet Coders </p>
+                                <p class="line-clamp-4">As President of Eleet Coders, I managed club communications,
+                                    organized events and workshops, and fostered a collaborative learning environment to
+                                    support members' professional growth. I also taught technical concepts and
+                                    facilitated
+                                    events to enhance members' skills and career readiness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
+                    <div>
+                        <div class="lg:sticky lg:pb-16 top-0">
+                            <div class="pt-8">
+                                <p>Sep 2023 - Oct 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 pt-8">
+                        <div class="flex-shrink-0">
+                            <div class="mx-auto ">
+                                <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
+                                    Sales Associate at Club Monaco</p>
+                                <p class="line-clamp-4">As a Sales Associate at Club Monaco, I provided excellent
+                                    customer
+                                    service by assisting clients, prioritizing tasks under pressure, and exceeding sales
+                                    expectations through clear communication in a dynamic environment.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>May 2024 - Present</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Support Engineer at Agile InfoTech</p>
-                            <p class="line-clamp-4">As a Support Engineer at Agile InfoTech, I provided technical assistance to
-                                clients, troubleshooting hardware and software issues, and ensured effective
-                                communication to address their needs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>May 2024 - Nov 2024</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Freelance Web Developer</p>
-                            <p class="line-clamp-4">As a Freelance Web Developer, I designed, developed, and deployed
-                                responsive websites tailored to meet client needs. I worked closely with clients to
-                                understand their objectives, ensuring the final product aligned with their vision.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>August 2022 - Present</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                President of Eleet Coders </p>
-                            <p class="line-clamp-4">As President of Eleet Coders, I managed club communications,
-                                organized events and workshops, and fostered a collaborative learning environment to
-                                support members' professional growth. I also taught technical concepts and facilitated
-                                events to enhance members' skills and career readiness.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-32 slide-in-element">
-                <div>
-                    <div class="lg:sticky lg:pb-16 top-0">
-                        <div class="pt-8">
-                            <p>Sep 2023 - Oct 2024</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 pt-8">
-                    <div class="flex-shrink-0">
-                        <div class="mx-auto ">
-                            <p class="text-4xl my-2 tracking-tighter font-semibold text-gray-700 text-balance">
-                                Sales Associate at Club Monaco</p>
-                            <p class="line-clamp-4">As a Sales Associate at Club Monaco, I provided excellent customer
-                                service by assisting clients, prioritizing tasks under pressure, and exceeding sales
-                                expectations through clear communication in a dynamic environment.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
         <div id="projects" class="max-w-7xl mx-auto flex flex-col gap-8 pt-4">
