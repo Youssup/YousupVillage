@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import Background from '../components/Background.vue';
 import CommUnity from '../assets/images/CommUnity.jpg';
-import QView3D from '../assets/images/QView3D.png';
+import QView3D from '../assets/images/Qview3D.png';
 import BetterCalendar from '../assets/images/Better-Calendar.png';
 import FitnessTracker from '../assets/images/Fitness-Tracker.png';
 import ComputationOptimizer from '../assets/images/Computation-Optimizer.png';
